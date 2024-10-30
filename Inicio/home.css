@@ -1,0 +1,199 @@
+/* Estilos básicos */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0c0d14;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    padding-top: 90px;
+}
+
+/* Imagen de fondo */
+.background {
+    position: fixed; /* Fija la imagen de fondo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Images/FondoWeb.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ajustar imagen de fondo */
+    z-index: -1; /* Colocar detrás del contenido */
+}
+
+/* Filtro de opacidad solo para la imagen de fondo */
+.background::before {
+    content: '';
+    position: absolute; /* Posición absoluta dentro de .background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color negro con opacidad */
+    z-index: 1; /* Colocar delante de la imagen de fondo */
+
+}
+
+.glow-title {
+    font-size: 2em; /* Tamaño del título */
+    color: #ffffff; /* Color fosforescente */
+    text-shadow: 0 0 10px #02d9ff, 0 0 20px #02d9ff, 0 0 30px #02d9ff;
+    text-align: center; /* Centrar el título */
+    margin: 0; /* Sin margen */
+    padding: 0px 0; /* Espacio alrededor del título */
+}
+
+header {
+    position: fixed; /* Fija el encabezado */
+    top: 0; /* Lo coloca en la parte superior */
+    width: 100%; /* Ocupa todo el ancho de la página */
+    z-index: 1000; /* Asegura que el encabezado esté siempre por encima de otros elementos */
+    background-color: #1a1c29;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Espacio debajo del encabezado */
+}
+
+nav {
+    width: 100%; /* Asegura que el nav ocupe todo el ancho */
+    text-align: center; /* Centrar el contenido del nav */
+    margin-left: -140px; /* Ajusta este valor para moverlo hacia la izquierda */
+}
+
+nav ul {
+    list-style-type: none;
+    display: inline-flex; /* Cambiar a inline-flex para centrar */
+    gap: 20px;
+    padding: 0; /* Eliminar padding */
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative; /* Necesario para la línea */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Ubica la línea justo debajo del texto */
+    width: 0;
+    height: 2px;
+    background-color: #02d9ff; /* Color de la línea */
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Se extiende al 100% cuando se pasa el cursor */
+}
+
+.user-icons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Sección Hero */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, #1742d1, #2997b9); /* Azul cian y azul oscuro */
+    border-radius: 10px;
+    margin: 20px auto; /* Centrar horizontalmente */
+    max-width: 870px; /* Limitar ancho máximo */
+    border: 5px solid #02d9ff; /* Borde fosforescente cian azul */
+    box-shadow: 0 0 15px #02d9ff; /* Sombra para el borde fosforescente */
+}
+
+#dynamic-text {
+    font-size: 3em;
+    color: #ffffff; /* Blanco fosforescente */
+    text-shadow: 0px 0px 10px #02d9ff; /* Sombra Azul para resaltar */
+    transition: all 0.3s ease-in-out;
+    display: inline; /* Mantener en línea para el efecto de puntos */
+}
+
+.typing-indicator {
+    font-size: 3em;
+    color: #02d9ff; /* Azul fosforescente */
+    display: inline; /* Mantener en línea con el texto */
+    animation: blink 1s step-end infinite; /* Efecto de parpadeo */
+}
+
+/* Sección Lenguajes */
+.languages {
+    padding: 20px;
+    text-align: center;
+    max-width: 800px; /* Limitar ancho máximo */
+    margin: 20px auto; /* Centrar horizontalmente */
+}
+
+.languages h2 {
+    margin-bottom: 20px; /* Espacio debajo del título de lenguajes */
+}
+
+.language-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #1a1c29bb;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    margin: 05px; /* Espacio entre las tarjetas */
+    border: 5px solid #ffffff; /* Borde fosforescente cian azul */
+    box-shadow: 0 0 15px #02d9ff; /* Sombra para el borde fosforescente */
+}
+
+.card h3 {
+    color: #00ffcc;
+}
+
+.card p {
+    color: #cccccc;
+}
+
+/* Estilo para las imágenes de los lenguajes */
+.language-image {
+    width: 50px; /* Ajustar el tamaño de la imagen */
+    height: auto; /* Mantener proporción */
+    margin: 10px 0; /* Espacio encima y debajo de la imagen */
+
+}
+
+/* Sección Estadísticas Globales */
+.global-stats {
+    background-color: #1a1c29bb;
+    padding: 50px;
+    margin: 20px auto; /* Centrar horizontalmente */
+    border-radius: 10px;
+    text-align: center;
+    max-width: 800px; /* Limitar ancho máximo */
+    border: 5px solid #02d9ff; /* Borde fosforescente cian azul */
+    box-shadow: 0 0 15px #02d9ff; /* Sombra para el borde fosforescente */
+}
+
+.global-stats h2 {
+    margin-bottom: 20px; /* Espacio debajo del título de estadísticas */
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.stat h3 {
+    color: #00ffcc;
+    font-size: 2em;
+}
+
+.stat p {
+    color: #cccccc;
+    font-size: 1.2em;
+}
