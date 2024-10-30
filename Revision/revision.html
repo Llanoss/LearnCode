@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnCode - Foro</title>
+    <link rel="stylesheet" href="revision.css">
+</head>
+<body>
+    <!-- Imagen de fondo -->
+    <div class="background"></div>
+
+    <!-- Encabezado -->
+    <header>
+        <h1 class="glow-title">LearnCode</h1>
+        <nav>
+            <ul>
+                <li><a href="/Frontend/Pages/Inicio/home.html">Inicio</a></li>
+                <li><a href="/Frontend/Pages/Lenguajes/lenguajes.html">Lenguajes</a></li>
+                <li><a href="/Frontend/Pages/Tendencias/tendencias.html">Tendencias</a></li>
+                <li><a href="/Frontend/Pages/Foros/foros.html">Foro</a></li>
+                <li><a href="/Frontend/Pages/Revision/revision.html">Revisión</a></li>
+                <li><a href="/Frontend/Pages/Historia/historia.html">Historia</a></li>
+                <li><a href="/Frontend/Pages/Estadisticas/estadisticas.html">Estadísticas</a></li>
+            </ul>
+        </nav>
+        <div class="user-icons">
+            <span class="icon-user"></span>
+            <span class="icon-settings"></span>
+        </div>
+    </header>
+
+    <div class="forum-container">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Busca publicaciones con el nombre del creador o ID..." oninput="searchForums()">
+            <button class="create-forum-button" onclick="openModal()">Crear Publicación</button>
+        </div>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>¿Necesitas Ayuda? ¡Comparte Código Aquí!</h2>
+                <div class="create-forum-form">
+                    <input type="text" id="creatorName" placeholder="Nombre del creador">
+                    <input type="text" id="forumTitle" placeholder="Título del codigo">
+                    <textarea id="forumDescription" rows="3" placeholder="Descripción del codigo"></textarea>
+                    <textarea id="postCode" rows="10" placeholder="Deja tu código aquí..."></textarea>
+                    <button class="reply-button" onclick="createForum()">Crear Publicación</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cuadro para los foros creados -->
+    <div class="forum-box">
+        <h3 id="forumsTitle" style="margin-bottom: 40px;">Publicaciones Recientes Para Colaboracion</h3>
+        <div id="forumsList"></div> <!-- Los foros creados aparecerán aquí -->
+        
+        <div class="forum-topic">
+            <div class="forum-header">
+                <p style="color: #02d9ff; font-weight: bold;">Juan Pérez</p>
+                <p>ID del Foro: 123456789</p>
+                <p>25 de octubre de 2024, 14:30</p>
+                <h2>Problemas con la función de envío de formularios</h2>
+                <p>Hola, estoy teniendo problemas para enviar un formulario en JavaScript. Cuando intento enviar, no ocurre nada. ¿Alguien puede ayudarme?</p>
+                <pre class="code-box"><code>
+        function enviarFormulario() {
+            var nombre = document.getElementById('nombre').value;
+            var email = document.getElementById('email').value;
+        
+            // Validación básica
+            if (nombre === "" || email === "") {
+                alert("Por favor, completa todos los campos.");
+                return;
+            }
+        
+            // Simular el envío de datos
+            console.log("Formulario enviado con éxito:", { nombre, email });
+            alert("¡Formulario enviado!");
+        }
+                </code></pre>
+                <button class="reply-button" onclick="toggleReplyInput('replyInput123456789')">Responder</button>
+            </div>
+        
+            <div id="replyInput123456789" class="reply-input" style="display:none;">
+                <textarea placeholder="Escribe tu comentario..."></textarea>
+                <button class="reply-button" onclick="submitComment('replyInput123456789', 'commentsSection123456789')">Comentar</button>
+            </div>
+        
+            <div id="commentsSection123456789" class="comments-section">
+                <!-- Comentarios -->
+                <div class="comment">
+                    <hr>
+                    <div class="comment-header">Ana Martínez</div>
+                    <div class="comment-time">24/10/2024 15:00</div>
+                    <div class="comment-text">Hola Juan, revisa si los IDs de tus elementos HTML coinciden con los que estás usando en tu código JavaScript.</div>
+                    <button class="comment-reply-button" onclick="toggleReplyInput('replyInputReply1')">Responder</button>
+                    <div id="replyInputReply1" class="reply-input" style="display:none;">
+                        <textarea placeholder="Escribe tu respuesta..."></textarea>
+                        <button class="reply-button" onclick="submitReply('replyInputReply1', 'repliesSectionReply1')">Comentar</button>
+                    </div>
+                    <div id="repliesSectionReply1" class="replies-section">
+                        <!-- Respuestas al comentario -->
+                        <div class="reply">
+                            <div class="comment-header">Juan Pérez</div>
+                            <div class="comment-time">25/10/2024 10:00</div>
+                            <div class="comment-text">Gracias, Ana. Verifiqué y los IDs son correctos. ¿Tienes alguna otra sugerencia?</div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="comment">
+                    <hr>
+                    <div class="comment-header">Luis Pérez</div>
+                    <div class="comment-time">24/10/2024 15:10</div>
+                    <div class="comment-text">También podrías agregar un `console.log` antes del `alert` para ver si el código se está ejecutando correctamente.</div>
+                    <button class="comment-reply-button" onclick="toggleReplyInput('replyInputReply2')">Responder</button>
+                    <div id="replyInputReply2" class="reply-input" style="display:none;">
+                        <textarea placeholder="Escribe tu respuesta..."></textarea>
+                        <button class="reply-button" onclick="submitReply('replyInputReply2', 'repliesSectionReply2')">Comentar</button>
+                    </div>
+                    <div id="repliesSectionReply2" class="replies-section">
+                        <!-- Respuestas al comentario -->
+                        <div class="reply">
+                            <div class="comment-header">Juan Pérez</div>
+                            <div class="comment-time">25/10/2024 10:15</div>
+                            <div class="comment-text">¡Buena idea, Luis! Haré eso y veré qué sucede. Gracias por tu ayuda.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div id="forumsList"></div>
+    </div>
+
+</section>
+</main>
+
+<script src="revision.js"></script>
+</body>
+</html>  
