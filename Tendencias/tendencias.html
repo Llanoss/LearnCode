@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnCode - Tendencias</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="tendencias.css">
+</head>
+<body>
+    <!-- Imagen de fondo -->
+    <div class="background"></div>
+
+    <!-- Encabezado -->
+    <header>
+        <h1 class="glow-title">LearnCode</h1>
+        <nav>
+            <ul>
+                <li><a href="/Frontend/Pages/Inicio/home.html">Inicio</a></li>
+                <li><a href="/Frontend/Pages/Lenguajes/lenguajes.html">Lenguajes</a></li>
+                <li><a href="/Frontend/Pages/Tendencias/tendencias.html">Tendencias</a></li>
+                <li><a href="/Frontend/Pages/Foros/foros.html">Foro</a></li>
+                <li><a href="/Frontend/Pages/Revision/revision.html">Revisión</a></li>
+                <li><a href="/Frontend/Pages/Historia/historia.html">Historia</a></li>
+                <li><a href="/Frontend/Pages/Estadisticas/estadisticas.html">Estadísticas</a></li>
+                <li><a href="/Frontend/Pages/Perfil/perfil.html"><i class="fas fa-user-circle"></i> Tu Perfil</a></li>            </ul>
+        </nav>
+    </header>
+
+    <!-- Barra de búsqueda -->
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Buscar tendencias..." onkeyup="filterTrends()">
+    </div>
+
+    <main>
+        <section id="trends" class="trends">
+            <h2>Tendencias en Programación (Proyectos)</h2>
+            <div class="trend-cards">
+                <div class="card">
+                    <h3>Facebook</h3>
+                    <img src="Images/Facebook.jpg" alt="Facebook" class="card-image">
+                    <p><strong>Lenguaje:</strong> PHP, JavaScript</p>
+                    <p><strong>Descripción:</strong> Una de las redes sociales más grandes del mundo, permite conectar con amigos y compartir contenido.</p>
+                    <p><strong>Características:</strong> Mensajería instantánea, grupos, eventos y una amplia API para desarrolladores.</p>
+                    <p><strong>Impacto:</strong> Transformó la forma en que las personas se comunican y comparten información.</p>
+                    <p><strong>Fecha de Lanzamiento:</strong> 2004</p>
+                </div>
+                <div class="card">
+                    <h3>YouTube</h3>
+                    <img src="Images/Youtube.jpg" alt="YouTube" class="card-image">
+                    <p><strong>Lenguajes:</strong> Python, JavaScript</p>
+                    <p><strong>Descripción:</strong> Plataforma de intercambio de videos donde los usuarios pueden subir, compartir y ver contenido en video.</p>
+                    <p><strong>Características:</strong> Comentarios, suscripciones, listas de reproducción y recomendaciones personalizadas.</p>
+                    <p><strong>Impacto:</strong> Transformó el consumo de medios y se convirtió en una herramienta vital para creadores y empresas.</p>
+                    <p><strong>Fecha de Lanzamiento:</strong> 2005</p>
+                </div>
+                <div class="card">
+                    <h3>Instagram</h3>
+                    <img src="Images/Instagram.jpeg" alt="Instagram" class="card-image">
+                    <p><strong>Lenguaje:</strong> Python, JavaScript</p>
+                    <p><strong>Descripción:</strong> Plataforma para compartir fotos y videos con un enfoque en la estética visual.</p>
+                    <p><strong>Características:</strong> Filtros para fotos, historias, mensajes directos y comercio electrónico.</p>
+                    <p><strong>Impacto:</strong> Cambió la manera en que se promueven las marcas y se interactúa con el contenido visual.</p>
+                    <p><strong>Fecha de Lanzamiento:</strong> 2010</p>
+                </div>
+                <div class="card">
+                    <h3>Minecraft</h3>
+                    <img src="Images/Minecraft.jpeg" alt="Minecraft" class="card-image">
+                    <p><strong>Lenguajes:</strong> Java, C++</p>
+                    <p><strong>Descripción:</strong> Juego de construcción y aventura donde los jugadores pueden explorar un mundo abierto, construir estructuras y sobrevivir.</p>
+                    <p><strong>Características:</strong> Modos de juego como creativo y supervivencia, multijugador y amplia personalización.</p>
+                    <p><strong>Impacto:</strong> Ha influido en el desarrollo de otros juegos y ha fomentado la creatividad en jugadores de todas las edades.</p>
+                    <p><strong>Fecha de Lanzamiento:</strong> 2011</p>
+                </div>
+                <div class="card">
+                    <h3>Twitter</h3>
+                    <img src="Images/Twitter.jpg" alt="Twitter" class="card-image">
+                    <p><strong>Lenguaje:</strong> Ruby, JavaScript</p>
+                    <p><strong>Descripción:</strong> Red social para microblogging que permite a los usuarios publicar y interactuar con mensajes cortos.</p>
+                    <p><strong>Características:</strong> Tweets, retweets, menciones y tendencias.</p>
+                    <p><strong>Impacto:</strong> Influye en la opinión pública y se usa ampliamente para noticias y activismo.</p>
+                    <p><strong>Fecha de Lanzamiento:</strong> 2006</p>
+                </div>
+                <div class="card">
+                    <h3>Reddit</h3>
+                    <img src="Images/Reddit.jpg" alt="Reddit" class="card-image">
+                    <p><strong>Lenguajes:</strong> Python, JavaScript</p>
+                    <p><strong>Descripción:</strong> Sitio web de agregación de noticias y contenido generado por los usuarios, donde se pueden votar publicaciones y comentarios.</p>
+                    <p><strong>Características:</strong> Subforos (subreddits), votaciones, comentarios y AMAs (Ask Me Anything).</p>
+                    <p><strong>Impacto:</strong> Se convirtió en un espacio importante para discusiones y contenido viral en Internet.</p>
+                    <p><strong>Fecha de Lanzamiento:</strong> 2005</p>
+                </div>
+                <div class="card">
+                    <h3>WhatsApp</h3>
+                    <img src="Images/Whatsapp.png" alt="WhatsApp" class="card-image">
+                    <p><strong>Lenguaje:</strong> Erlang, JavaScript</p>
+                    <p><strong>Descripción:</strong> Aplicación de mensajería instantánea que permite enviar mensajes de texto, voz y video.</p>
+                    <p><strong>Características:</strong> Llamadas de voz y video, chats grupales y cifrado de extremo a extremo.</p>
+                    <p><strong>Impacto:</strong> Revolucionó la comunicación móvil y la mensajería instantánea.</p>
+                    <p><strong>Fecha de Lanzamiento:</strong> 2009</p>
+                </div>
+                <div class="card">
+                    <h3>Spotify</h3>
+                    <img src="Images/Spotify.jpg" alt="Spotify" class="card-image">
+                    <p><strong>Lenguajes:</strong> Java, Python, C++</p>
+                    <p><strong>Descripción:</strong> Plataforma de streaming de música que permite a los usuarios escuchar canciones y crear listas de reproducción.</p>
+                    <p><strong>Características:</strong> Recomendaciones personalizadas, playlists colaborativas y acceso a una amplia biblioteca musical.</p>
+                    <p><strong>Impacto:</strong> Revolucionó la forma en que se consume música, desplazando las descargas de archivos y promoviendo el streaming.</p>
+                    <p><strong>Fecha de Lanzamiento:</strong> 2006</p>
+                </div>
+                <div class="card">
+                    <h3>TikTok</h3>
+                    <img src="Images/Tiktok.png" alt="TikTok" class="card-image">
+                    <p><strong>Lenguaje:</strong> Java, Python</p>
+                    <p><strong>Descripción:</strong> Plataforma de videos cortos que permite crear y compartir contenido musical y de entretenimiento.</p>
+                    <p><strong>Características:</strong> Efectos visuales, música integrada, y herramientas de edición.</p>
+                    <p><strong>Impacto:</strong> Se convirtió en un fenómeno cultural, influyendo en tendencias y en la música.</p>
+                    <p><strong>Fecha de Lanzamiento:</strong> 2016</p>
+                </div>
+                <div class="card">
+                    <h3>Slack</h3>
+                    <img src="Images/Slack.jpg" alt="Slack" class="card-image">
+                    <p><strong>Lenguajes:</strong> PHP, JavaScript</p>
+                    <p><strong>Descripción:</strong> Herramienta de comunicación en equipo que facilita la colaboración a través de canales y mensajes directos.</p>
+                    <p><strong>Características:</strong> Integraciones con otras aplicaciones, búsqueda avanzada y soporte para compartir archivos.</p>
+                    <p><strong>Impacto:</strong> Mejoró la comunicación empresarial y cambió la forma en que las organizaciones gestionan la colaboración.</p>
+                    <p><strong>Fecha de Lanzamiento:</strong> 2013</p>
+                </div>
+                <div class="card">
+                    <h3>6. LinkedIn</h3>
+                    <img src="Images/Linkedin.jpg" alt="LinkedIn" class="card-image">
+                    <p><strong>Lenguaje:</strong> Java, JavaScript</p>
+                    <p><strong>Descripción:</strong> Red social profesional que permite a los usuarios conectar y compartir experiencias laborales.</p>
+                    <p><strong>Características:</strong> Creación de perfiles profesionales, búsqueda de empleo y networking.</p>
+                    <p><strong>Impacto:</strong> Se convirtió en la plataforma principal para reclutamiento y desarrollo profesional.</p>
+                    <p><strong>Fecha de Lanzamiento:</strong> 2003</p>
+                </div>
+                <div class="card">
+                    <h3>Pinterest</h3>
+                    <img src="Images/Pinterest.jpg" alt="Pinterest" class="card-image">
+                    <p><strong>Lenguajes:</strong> Ruby, JavaScript</p>
+                    <p><strong>Descripción:</strong> Plataforma de descubrimiento visual donde los usuarios pueden guardar y compartir ideas a través de "pines".</p>
+                    <p><strong>Características:</strong> Tableros, búsqueda visual y recomendaciones basadas en intereses.</p>
+                    <p><strong>Impacto:</strong> Se convirtió en una herramienta clave para el marketing visual y la inspiración en diseño.</p>
+                    <p><strong>Fecha de Lanzamiento:</strong> 2010</p>
+                </div>
+                <div class="card">
+                    <h3>Trello</h3>
+                    <img src="Images/Trello.png" alt="Trello" class="card-image">
+                    <p><strong>Lenguajes:</strong> JavaScript, Backbone.js</p>
+                    <p><strong>Descripción:</strong> Aplicación de gestión de proyectos basada en tableros que permite organizar tareas y colaborar en equipo.</p>
+                    <p><strong>Características:</strong> Listas, tarjetas, comentarios y adjuntos.</p>
+                    <p><strong>Impacto:</strong> Ayudó a equipos a mejorar la organización y seguimiento de proyectos.</p>
+                    <p><strong>Fecha de Lanzamiento:</strong> 2011</p>
+                </div>
+                <div class="card">
+                    <h3>Angry Birds</h3>
+                    <img src="Images/Angrybirds.png" alt="Angry Birds" class="card-image">
+                    <p><strong>Lenguajes:</strong> C++, Objective-C</p>
+                    <p><strong>Descripción:</strong> Juego de arcade en el que los jugadores utilizan un tirachinas para lanzar aves contra estructuras para derribar cerdos.</p>
+                    <p><strong>Características:</strong> Niveles desafiantes, física del juego y personajes icónicos.</p>
+                    <p><strong>Impacto:</strong> Se convirtió en uno de los juegos móviles más exitosos y reconocidos en todo el mundo.</p>
+                    <p><strong>Fecha de Lanzamiento:</strong> 2009</p>
+                </div>
+                <div class="card">
+                    <h3>WhatsApp Web</h3>
+                    <img src="Images/Whatsappweb.png" alt="WhatsApp Web" class="card-image">
+                    <p><strong>Lenguajes:</strong> JavaScript, HTML, CSS</p>
+                    <p><strong>Descripción:</strong> Extensión de la popular aplicación de mensajería que permite a los usuarios chatear desde su navegador.</p>
+                    <p><strong>Características:</strong> Sincronización con el móvil, envíos de mensajes, llamadas y video llamadas.</p>
+                    <p><strong>Impacto:</strong> Aumentó la comodidad de la mensajería instantánea y la comunicación en dispositivos de escritorio.</p>
+                    <p><strong>Fecha de Lanzamiento:</strong> 2015</p>
+                </div>
+                <div class="card">
+                    <h3>Etsy</h3>
+                    <img src="Images/Etsy.png" alt="Etsy" class="card-image">
+                    <p><strong>Lenguajes:</strong> PHP, JavaScript</p>
+                    <p><strong>Descripción:</strong> Mercado en línea para productos hechos a mano y vintage, así como materiales para artesanía.</p>
+                    <p><strong>Características:</strong> Tiendas personalizadas, métodos de pago seguros y opciones de envío.</p>
+                    <p><strong>Impacto:</strong> Fomentó el comercio de productos únicos y apoyó a emprendedores creativos.</p>
+                    <p><strong>Fecha de Lanzamiento:</strong> 2005</p>
+                </div>
+                <div class="card">
+                    <h3>Discord</h3>
+                    <img src="Images/Discord.png" alt="Discord" class="card-image">
+                    <p><strong>Lenguajes:</strong> Elixir, JavaScript</p>
+                    <p><strong>Descripción:</strong> Plataforma de comunicación diseñada para comunidades, ofreciendo chat de voz, video y texto.</p>
+                    <p><strong>Características:</strong> Servidores personalizables, bots y opciones de moderación.</p>
+                    <p><strong>Impacto:</strong> Se convirtió en un espacio popular para gamers y comunidades en línea.</p>
+                    <p><strong>Fecha de Lanzamiento:</strong> 2015</p>
+                </div>
+                <div class="card">
+                    <h3>Airbnb</h3>
+                    <img src="Images/Airbnb.png" alt="Airbnb" class="card-image">
+                    <p><strong>Lenguajes:</strong> Ruby on Rails, JavaScript</p>
+                    <p><strong>Descripción:</strong> Plataforma que permite a los usuarios alquilar o reservar alojamiento en propiedades privadas.</p>
+                    <p><strong>Características:</strong> Búsqueda de alojamientos, perfiles de anfitriones, y sistema de calificaciones.</p>
+                    <p><strong>Impacto:</strong> Revolucionó la industria del turismo y la hospitalidad, proporcionando alternativas a los hoteles tradicionales.</p>
+                    <p><strong>Fecha de Lanzamiento:</strong> 2008</p>
+                </div>
+                <div class="card">
+                    <h3>Netflix</h3>
+                    <img src="Images/Netflix.jpg" alt="Netflix" class="card-image">
+                    <p><strong>Lenguajes:</strong> Java, Python, JavaScript</p>
+                    <p><strong>Descripción:</strong> Plataforma de streaming que ofrece una amplia variedad de películas, series y documentales.</p>
+                    <p><strong>Características:</strong> Recomendaciones personalizadas, contenido original, y visualización offline.</p>
+                    <p><strong>Impacto:</strong> Ha transformado la industria del entretenimiento, permitiendo el consumo de contenido bajo demanda.</p>
+                    <p><strong>Fecha de Lanzamiento:</strong> 1997 (servicio de streaming lanzado en 2007)</p>
+                </div>
+                <div class="card">
+                    <h3>Snapchat</h3>
+                    <img src="Images/Snapchat.jpg" alt="Snapchat" class="card-image">
+                    <p><strong>Lenguajes:</strong> Objective-C, Java, C++</p>
+                    <p><strong>Descripción:</strong> Aplicación de mensajería que permite el envío de fotos y videos que desaparecen después de ser vistos.</p>
+                    <p><strong>Características:</strong> Filtros de realidad aumentada, historias, y mensajes efímeros.</p>
+                    <p><strong>Impacto:</strong> Ha influido en la forma en que los jóvenes se comunican y comparten momentos.</p>
+                    <p><strong>Fecha de Lanzamiento:</strong> 2011</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="tendencias.js"></script>
+</body>
+</html>
