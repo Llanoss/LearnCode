@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnCode - Foro</title>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="foros.css">
+</head>
+<body>
+    <!-- Imagen de fondo -->
+    <div class="background"></div>
+
+    <!-- Encabezado -->
+    <header>
+        <h1 class="glow-title">LearnCode</h1>
+        <nav>
+            <ul>
+                <li><a href="/Frontend/Pages/Inicio/home.html">Inicio</a></li>
+                <li><a href="/Frontend/Pages/Lenguajes/lenguajes.html">Lenguajes</a></li>
+                <li><a href="/Frontend/Pages/Tendencias/tendencias.html">Tendencias</a></li>
+                <li><a href="/Frontend/Pages/Foros/foros.html">Foro</a></li>
+                <li><a href="/Frontend/Pages/Revision/revision.html">Revisión</a></li>
+                <li><a href="/Frontend/Pages/Historia/historia.html">Historia</a></li>
+                <li><a href="/Frontend/Pages/Estadisticas/estadisticas.html">Estadísticas</a></li>
+                <li><a href="/Frontend/Pages/Perfil/perfil.html"><i class="fas fa-user-circle"></i> Tu Perfil</a></li>            </ul>
+        </nav>
+        <div class="user-icons">
+            <span class="icon-user"></span>
+            <span class="icon-settings"></span>
+        </div>
+    </header>
+
+    <div class="forum-container">
+        <div class="search-container">
+            <input type="text" id="search-input" class="search-input" placeholder="Busca foros con el nombre del creador o ID..." oninput="searchForums()">
+            <button class="create-forum-button" onclick="openModal()">Crear foro</button>
+        </div>
+
+        <!-- Modal para crear foro -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>¡Crea Tu Propio Foro!</h2>
+                <div class="create-forum-form">
+                    <p><strong>Creador:</strong> <span id="creatorNameDisplay"></span></p> <!-- Aquí se mostrará el nombre -->
+                    <input type="text" id="forumTitle" placeholder="Título del foro">
+                    <textarea id="forumDescription" rows="3" placeholder="Descripción del foro"></textarea>
+                    <button class="reply-button" onclick="createForum()">Crear foro</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cuadro para los foros creados -->
+        <div class="forum-box">
+            <h3 id="forumsTitle" style="margin-bottom: 20px;">Todos Los Foros Creados En LearnCode</h3>
+            <div id="forumsList">
+                <!-- Los foros creados aparecerán aquí -->
+            </div>
+        </div>
+
+        <div id="comments-container">
+            <!-- Los comentarios se agregarán aquí -->
+        </div>        
+
+    <script src="foros.js"></script>
+</body>
+</html>
