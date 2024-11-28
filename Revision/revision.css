@@ -1,0 +1,424 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    padding-top: 90px;
+}
+
+/* Imagen de fondo */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Images/FondoWeb.jpg') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.glow-title {
+    font-size: 2em;
+    color: #ffffff;
+    text-shadow: 0 0 10px #02d9ff, 0 0 20px #02d9ff, 0 0 30px #02d9ff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #1a1c29;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    width: 100%;
+    text-align: center;
+    margin-left: -140px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: inline-flex;
+    gap: 20px;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #02d9ff;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.user-icons {
+    display: flex;
+    gap: 15px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+}
+
+.forum-container {
+    padding: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.search-input {
+    flex: 1; /* Para que la barra de búsqueda ocupe el espacio disponible */
+    padding: 20px;
+    border-radius: 4px;
+    border: 5px solid #ffffff;
+    background-color: #1a1c298e;
+    box-shadow: 0 0 15px #02d9ff;
+    color: #ffffff;
+    margin-right: 10px; /* Espacio entre la barra de búsqueda y el botón */
+}
+
+.create-forum-button {
+    background-color: #02d9ffa6;
+    color: #ffffff;
+    border: 5px solid #ffffff;
+    box-shadow: 0 0 10px #02d9ff;
+    cursor: pointer;
+    padding: 15px; /* Tamaño más pequeño */
+    border-radius: 4px;
+    font-size: 22px; /* Tamaño de fuente más pequeño */
+}
+
+.create-forum-button:hover {
+    background-color: #02d9ff;
+}
+
+/* Estilo para el encabezado de la revisión */
+.revision-header {
+    background-color: #1a1c29;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #ffffff;
+}
+
+/* Estilo para el título dentro de la revisión */
+.revision-header h2 {
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+    margin: 10px;
+}
+
+.forum-header p {
+    margin: 3px 0;
+    font-size: 16px; /* Tamaño de la fecha y hora */
+    color: #ffffff; /* Color para la fecha y hora */
+}
+
+/* Estilo del tema a discutir */
+.forum-topic {
+    margin: 20px 0;
+    padding: 40px;
+    background-color: none;
+    border: 0px solid #ffffff;
+    border-radius: 0px;
+    font-size: 16px; /* Tamaño del texto del tema */
+}
+
+.reply-button {
+    background-color: #02d9ffa6; /* Color del botón */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px; /* Espacio dentro del botón */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño del botón */
+    width: 20%; /* Ancho completo */
+}
+
+.reply-button:hover {
+    background-color: #02d9ff; /* Cambio de color al pasar el mouse */
+}
+
+
+.comments-section {
+    margin-top: 20px;
+    padding-top: 20px; /* Espacio superior */
+}
+
+.comment {
+    margin: 10px 0;
+    padding: 20px;
+}
+
+.comment-header {
+    color: #02d9ff; /* Azul para el nombre del comentarista */
+    font-size: 16px; /* Tamaño del nombre del comentarista */
+    font-weight: bold; /* Negrita */
+}
+
+.comment-time {
+    color: #ffffff; /* Color para la fecha y hora */
+    font-size: 16px; /* Tamaño de la fecha y hora */
+    margin-bottom: 10px;
+}
+
+.comment-text {
+    margin-bottom: 10px; /* Espacio debajo del texto del comentario */
+}
+
+.comment-reply-button {
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    color: #02d9ff; /* Color del texto */
+    cursor: pointer; /* Cursor de puntero */
+    padding: 5px 0; /* Espacio alrededor del botón */
+    font-size: 16px; /* Tamaño de fuente */
+    text-decoration: underline; /* Subrayar el texto */
+}
+
+.reply-input {
+    display: none;
+    margin-top: 10px;
+}
+
+.reply-input textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    background-color: #1a1c29;
+    color: #ffffff;
+}
+
+.reply-input button {
+    margin-top: 5px;
+    padding: 10px;
+    background-color: #02d9ffa6;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.reply-input button:hover {
+    background-color: #02d9ff;
+}
+
+/* Estilo de las líneas divisorias */
+.divider {
+    border-top: 1px solid rgb(255, 255, 255);
+    margin: 20px 0;
+}
+
+.replies-section {
+    margin-left: 20px; /* Indentación para las respuestas */
+    padding-left: 15px; /* Espacio dentro del contenedor de respuestas */
+    position: relative; /* Para posicionar la línea vertical */
+    margin-top: 10px; /* Espacio entre el comentario y las respuestas */
+}
+
+.replies-section::before {
+    content: "";
+    position: absolute;
+    left: 30px; /* Ajusta según la indentación deseada */
+    top: 0; /* Empieza desde la parte superior */
+    bottom: 0; /* Se extiende hasta el final del contenedor */
+    width: 2px; /* Ancho de la línea */
+    background-color: rgba(255, 255, 255, 0.5); /* Color de la línea */
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Ocultar por defecto */
+    position: fixed; /* Fijo en pantalla */
+    z-index: 1; /* Delante de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Habilitar scroll si es necesario */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad */
+}
+
+.modal-content {
+    background: linear-gradient(to bottom, #2b324b, #1c200a);
+    margin: 10% auto; /* Centrado vertical */
+    padding: 100px; /* Espaciado interno */
+    border: 2px solid #ffffff;
+    width: 1000%; /* Ancho del modal */
+    max-width: 800px; /* Ancho máximo */
+    border-radius: 4px; /* Esquinas redondeadas */
+    animation: zoom 0.5s; /* Animación de zoom */
+}
+
+@keyframes zoom {
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+
+.close {
+    color: #ffffff;
+    float: right; /* Alinear a la derecha */
+    font-size: 28px; /* Tamaño de fuente */
+}
+
+.close:hover,
+.close:focus {
+    color: #02d9ff; /* Cambiar color al pasar el ratón */
+    text-decoration: none; /* Sin subrayado */
+    cursor: pointer; /* Cursor tipo puntero */
+}
+
+.create-forum-form {
+    margin-top: 20px;
+}
+
+.create-forum-form input, .create-forum-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
+    color: #ffffff;
+}
+
+.code-box {
+    max-height: 200px; /* Altura máxima del cuadro */
+    overflow-y: auto; /* Desplazamiento vertical */
+    background-color: #47454500; /* Fondo gris claro */
+    border: 2px solid #ffffff; /* Borde */
+    padding: 10px; /* Espacio interno */
+    font-family: monospace; /* Fuente de estilo de código */
+    white-space: pre-wrap; /* Permite saltos de línea */
+}
+
+.forum-box {
+    padding: 20px;
+    border: 2px solid #ffffff;
+    background: linear-gradient(to bottom, #2b324b, #1c200a86);
+    border-radius: 8px; /* Esquinas redondeadas */
+    margin-top: 70px; /* Separación del cuadro de la barra de búsqueda */
+}
+
+.replies-section {
+    margin-top: 10px; /* Espacio encima de las respuestas */
+    padding-left: 40px; /* Espacio a la izquierda para indentación */
+    }
+
+.reply {
+    background-color: transparent; /* Fondo más claro para las respuestas */
+    margin-top: 5px; /* Espacio entre respuestas */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 4px; /* Esquinas redondeadas */
+}
+
+.comment-reply-button {
+   background: none; /* Sin fondo */
+   border: none; /* Sin borde */
+   color: #02d9ff; /* Color del texto */
+   cursor: pointer; /* Cursor de puntero */
+   padding: 0; /* Sin padding para que no haya espacio extra */
+   font-size: 14px; /* Tamaño de fuente */
+   text-decoration: underline; /* Subrayar el texto */
+}
+
+.comment-reply-button:hover {
+   color: #ffffff; /* Color del texto al pasar el mouse */
+}
+
+/* Estilo global para todos los botones de eliminar */
+.delete-button {
+    background-color: #384a85a1; /* Color rojo */
+    color: white;
+    padding: 2px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center; /* Centra el ícono */
+    gap: 5px; /* Espacio entre el ícono y el texto */
+}
+
+/* Estilo específico para los botones de eliminar dentro de respuestas */
+.replies-section .delete-button {
+    padding: 15px 15px; /* Relleno dentro del botón */
+    margin-top: 15px;    /* Espacio en la parte superior */
+    margin-bottom: 0px; /* Espacio en la parte inferior */
+}
+
+/* Estilo específico para los botones dentro de los comentarios */
+.comment .button-container {
+    display: flex;
+    justify-content: flex-start; /* Mantén los botones alineados a la izquierda */
+    gap: 10px; /* Reduce el espacio entre los botones */
+}
+
+/* Ajusta el margen del botón eliminar para que esté más cerca del botón responder */
+.comment .delete-button {
+    margin-left: 5px; /* Añade un pequeño margen solo al botón eliminar para acercarlo al de responder */
+}
+
+/* Estilos de los placeholders */
+::placeholder {
+    color: #ffffff; /* Color blanco */
+    opacity: 1;
+}
+
+.search-input::placeholder {
+    color: #ffffff;
+}
+
+.create-forum-form input::placeholder, 
+.create-forum-form textarea::placeholder {
+    color: #ffffff;
+}
+
