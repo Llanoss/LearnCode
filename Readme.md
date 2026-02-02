@@ -15,5 +15,6 @@ Revisión de Código: Mejora tu código con la retroalimentación de la comunida
 Historia y Estadísticas: Descubre la evolución del software y analiza el impacto de diferentes lenguajes y tecnologías a través del tiempo.
 
 
-Además, LearnCode te ofrece una interfaz intuitiva y personalizada para que puedas gestionar tu perfil, acceder a tus áreas de interés de manera rápida y sencilla. Nuestra misión es facilitarte el camino hacia la excelencia en programación...
+Además, LearnCode te ofrece una interfaz intuitiva y personalizada para que puedas gestionar tu perfil, acceder a tus áreas de interés de manera rápida y sencilla. Nuestra misión es facilitarte el camino hacia la excelencia en programación.
+
 
